@@ -1,4 +1,7 @@
 # rsx
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![Build Status](https://travis-ci.org/victorporof/rust-self-tokenize.svg?branch=master)](https://travis-ci.org/victorporof/rust-self-tokenize)
+
 A compiler plugin for using RSX (JSX-like syntax) as advanced templating and metaprogramming in Rust.
 
 Made possible by the [Self Tokenize](https://github.com/victorporof/rust-self-tokenize) library, a trait derive for transferring data structures outside of procedural macros from compile-time to run-time.
@@ -6,6 +9,8 @@ Made possible by the [Self Tokenize](https://github.com/victorporof/rust-self-to
 Take a look at the [RSX DOM](https://github.com/victorporof/rsx-dom) and [RSX Stylesheet](https://github.com/victorporof/rsx-stylesheet) crates for the underlying types and implementations, or the [RSX parser](https://github.com/victorporof/rsx-parser) and [Servo CSS parser](https://github.com/victorporof/servo-css-parser) parsing backends for the parser combinators. To render these data structures, see [RSX Layout](https://github.com/victorporof/rsx-layout) and [RSX Primitives](https://github.com/victorporof/rsx-primitives), which integrate with [Facebook's YOGA](https://facebook.github.io/yoga/) library and [Servo's Graphics](https://github.com/servo/servo/tree/89d5780570894a54774542e79585b79ece3f2dce/components/gfx) component for building a Servo [WebRender](https://github.com/servo/webrender)-powered `gfx::display_list::DisplayList`.
 
 ## Purpose
+[Documentation](https://victorporof.github.io/rsx)
+
 This compiler plugin allows you to freely intertwine JSX-like syntax anywhere into your Rust code.
 
 RSX implements all of the [JSX](http://facebook.github.io/jsx) grammar. The [purpose and benefits](https://reactjs.co/2015/08/04/advantages-of-jsx/) of JSX and RSX are equivalent.
