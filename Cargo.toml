@@ -1,0 +1,30 @@
+[package]
+name = "rsx"
+version = "0.1.0"
+authors = ["Victor Porof <victor.porof@gmail.com>"]
+
+[lib]
+proc-macro = true
+
+[features]
+default = ["rsx-macro", "css-macro"]
+
+rsx-macro = [
+  "quote",
+  "rsx-primitives/rsx-parse",
+  "rsx-primitives/dom-tokenize",
+  "rsx-primitives/dom-types"
+]
+
+css-macro = [
+  "quote",
+  "regex",
+  "rsx-primitives/css-parse",
+  "rsx-primitives/cssom-tokenize",
+  "rsx-primitives/cssom-types"
+]
+
+[dependencies]
+quote = { version = "0.3.15", optional = true }
+regex = { version = "0.2.2", optional = true }
+rsx-primitives = { git = "https://github.com/victorporof/rsx-primitives.git", default-features = false, optional = true }
